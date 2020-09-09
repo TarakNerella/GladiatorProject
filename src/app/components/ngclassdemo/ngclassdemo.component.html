@@ -1,0 +1,17 @@
+
+<div [ngStyle]="{'background-color':'red'}">Happy </div>
+
+<h4>NgStyle</h4>
+<ul *ngFor="let person of people">
+    <li [ngStyle]="{'color':getColor(person.country)}">
+        {{ person.name }}
+        {{ person.country }}
+    </li>
+</ul>
+
+<!-- <div [ngStyle]="{'background-color':person.country === 'UK' ? 'green' : 'red' }"></<div>
+    The above code uses the ternary operator to set the background color to green if the persons country is the UK else red.
+    
+    But the expression doesn’t have to be inline, we can call a function on the component instead.
+    
+    To demonstrate this let’s flesh out a full example. Similar to the ones we’ve created before let’s loop through an array of people and print out there names in different colors depending on the country they are from. -->
